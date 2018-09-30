@@ -6,7 +6,7 @@ Contribuições sempre serão bem vindas!!!
 
 ## Aplicações command-line
 
-- [Cotação de moedas](dart-command-line/README.md) - Exemplo de aplicação command-line que faz uso de um serviço Rest disponibilizado pelo site [Alpha Vantage](https://www.alphavantage.co/) que faz conversão de moeda em tempo real.
+- [Cotação de moedas](dart-command-line) - Exemplo de aplicação command-line que faz uso de um serviço Rest disponibilizado pelo site [Alpha Vantage](https://www.alphavantage.co/) que faz conversão de moeda em tempo real.
 
 ## Aplicações server-side
 
