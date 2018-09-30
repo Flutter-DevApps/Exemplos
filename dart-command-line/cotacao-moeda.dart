@@ -11,7 +11,7 @@ void main(List<String> args) {
   .then((HttpClientRequest request) {
     // Aqui você pode configurar a requisição (ex. adicionar headers, timeout e etc)
     // Chamar o close do request para que requisição seja realizada. 
-    // Ao retorna o resultado método close (Future<HttpClientResponse>), podemos implmentar o then para aguardar o response
+    // Ao retorna o resultado método close (Future<HttpClientResponse>), podemos implementar o then para aguardar o response
     return request.close();
   }).then((HttpClientResponse response) {
     // Processando o response
