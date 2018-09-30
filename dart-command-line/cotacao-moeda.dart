@@ -2,12 +2,12 @@ import 'dart:io';
 import 'dart:convert';
 
 const utf8 = const Utf8Codec();
-const apiKey = '<digite_aqui_sua_api_key>';
+const apiKey = '<digite_aqui_sua_apiKey>';
 const baseUrlAlphaVantage = 'https://www.alphavantage.co/query?apikey=${apiKey}';
 
-void main({String currency: 'BTC'}) {
+void main(List<String> args) {
   HttpClient client = new HttpClient();
-  client.getUrl(Uri.parse('${baseUrlAlphaVantage}&function=CURRENCY_EXCHANGE_RATE&from_currency=${currency}&to_currency=BRL'))
+  client.getUrl(Uri.parse('${baseUrlAlphaVantage}&function=CURRENCY_EXCHANGE_RATE&from_currency=${args.length > 0 ? args.first : 'BTC'}&to_currency=BRL'))
   .then((HttpClientRequest request) {
     // Aqui você pode configurar a requisição (ex. adicionar headers, timeout e etc)
     // Chamar o close do request para que requisição seja realizada. 
@@ -23,9 +23,9 @@ void main({String currency: 'BTC'}) {
       var ultimaAtualizacao = DateTime.parse(decoded['6. Last Refreshed']);
       ultimaAtualizacao = ultimaAtualizacao.toLocal();
 
-      print('De: ' + decoded['1. From_Currency Code'] + ' - ' + decoded['2. From_Currency Name']);
-      print('Para: ' + decoded['3. To_Currency Code'] + ' - ' + decoded['4. To_Currency Name']);
-      print('Última atualização: ' + ultimaAtualizacao.toString());
+      print('De: ${decoded['1. From_Currency Code']} - ${decoded['2. From_Currency Name']}');
+      print('Para: ${decoded['3. To_Currency Code']} - ${decoded['4. To_Currency Name']}');
+      print('Última atualização: ${ultimaAtualizacao}');
       print(decoded['5. Exchange Rate']);
     });
   });
