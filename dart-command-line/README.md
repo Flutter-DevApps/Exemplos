@@ -2,7 +2,7 @@
 
 Exemplo de aplicação command-line que faz uso de um serviço Rest disponibilizado pelo site [Alpha Vantage](https://www.alphavantage.co/) que faz conversão de moeda em tempo real.
 
-A criação deste programa durante a elaboração de um documento de estudo do Dart/Flutter que você pode encontrar neste [link](https://github.com/Flutter-DevApps/Documentos/03_Platforms_Dart/DartInCommandLine.md).
+A criação deste programa durante a elaboração de um documento de estudo do Dart/Flutter que você pode encontrar neste [link](https://github.com/Flutter-DevApps/Documentos/blob/master/03_Platforms_Dart/DartInCommandLine.md).
 
 E ao digitar o comando 'dart cotacao-moeda.dart', veja o resultado. Como padrão a moeda a ser convertida para o real é a cripto moeda Bitcoin.
 
